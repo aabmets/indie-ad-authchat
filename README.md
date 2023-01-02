@@ -32,5 +32,7 @@ and open your default web browser to the URL that is being served by the local P
 1. When the user has scrolled up to see older messages, a "Back to newer" button is shown at the bottom of the chat window.
 1. Scrolling to the top of the current messages list will cause the client to fetch more messages from the server.
 1. The notification "No more messages" is shown at the top of the chat window when the client has fetched all messages from the server.
+1. Messages are aligned either left or right depending if their author is the current user or other users.
+1. Successive messages by the same user have the username and avatar icon hidden in order to compact the view.
 1. Hovering the mouse over a message will display a tooltip about the author and the timestamp of the message.
 1. Responsive and mobile screen versions of the chatroom.
