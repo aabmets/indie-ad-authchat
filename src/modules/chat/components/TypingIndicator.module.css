@@ -1,0 +1,41 @@
+@keyframes tiFrames {
+	0%	{ transform: translateY(0px) }
+	28%	{ transform: translateY(-5px) }
+	44%	{ transform: translateY(0px) }
+}
+
+.tiDot {
+    display: inline-block;
+    animation: tiFrames 1.5s infinite ease-in-out;
+    border-radius: 2px;
+    height: 3px;
+    margin-right: 3px;
+    width: 3px;
+}
+
+.tiDot:nth-child(1){
+	animation-delay: 200ms;
+}
+
+.tiDot:nth-child(2){
+	animation-delay: 300ms;
+}
+
+.tiDot:nth-child(3){
+	animation-delay: 400ms;
+}
+
+.tiContainer {
+	padding-left: 4px;
+	padding-bottom: 4px;
+}
+.tiContainer .tiDot {
+    background-color: #90949c;
+	align-self: flex-end;
+}
+
+.tiBlock {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}

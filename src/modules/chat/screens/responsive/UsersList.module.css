@@ -1,0 +1,38 @@
+.usersList__container {
+	width: 200px;
+	height: 100%;
+	border-left: 1.5px solid #d0d0d0;
+}
+
+.usersList__content {
+	height: calc(100% - 40px);
+	padding-top: 8px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-left: 3%;
+	border-bottom: 1.5px solid #d0d0d0;
+}
+
+.usersList__header {
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 3px;
+	border-bottom: 1.5px solid #d0d0d0;
+}
+
+.usersList__headerText {
+	font-size: 0.8rem; 
+	font-weight: 800; 
+	font-family: Verdana;
+	color: #F44336;
+}
+
+.usersList__headerCount {
+	font-size: 0.8rem; 
+	font-weight: 800; 
+	font-family: Verdana;
+	color: #3D3D3D;
+}

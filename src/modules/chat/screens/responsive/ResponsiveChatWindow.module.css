@@ -1,0 +1,26 @@
+.screenContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+.chatWindow {
+	height: auto;
+	width: auto; 
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px; 
+	border: 4px double #d5d5d5; 
+	background-color: #ffffff;
+}
+
+.chatContent {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	justify-self: stretch;
+	height: 60vh;
+	min-height: 300px;
+	max-height: 550px;
+}
