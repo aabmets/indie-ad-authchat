@@ -41,3 +41,9 @@ and open your default web browser to the URL that is being served by the local P
 1. Hovering the mouse over a message will display a tooltip about the author and the timestamp of the message.
 1. Users are able to submit their messages using the Enter key on the keyboard.
 1. Responsive layout for desktop, tablet and mobile screens.
+
+## Limitations
+
++ Because this version of PocketBase that is used for this project does not support server-side functions, it is not possible  
+to log out a user from server side when the client becomes unresponsive. It could be done unreasonably, whereby each  
+client would have to track the heartbeat of every other logged-in user, but this does not scale well for larger userbases.  
