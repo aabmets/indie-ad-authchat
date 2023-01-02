@@ -7,8 +7,8 @@ using Vite + React with Bootstrap for the front-end and PocketBase PaaS for the 
 this project took about two workweeks to complete and contains about 1700 lines of code.
 
 Almost all of the code and logic was created by myself, with only a tiny fraction taken directly from  
-the Bootstrap documentation. No help was obtained from any tutorial videos nor third-parties and the  
-internet was only used for reading related documentation and troubleshooting bugs.  
+the Bootstrap documentation. No help was obtained from any tutorial videos nor third-parties and  
+the internet was only used for reading related documentation and troubleshooting bugs.  
 
 ## How to use
 
