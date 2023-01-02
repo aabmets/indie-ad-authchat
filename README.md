@@ -27,6 +27,7 @@ and open your default web browser to the URL that is being served by the local P
 1. It has an active-users list, a messages list and message input field.
 1. Server-side database changes propagate in realtime to all active users.
 1. The current user has a different avatar icon than the other users.
+1. A typing indicator is shown for each user who is currently typing into the input field.
 1. The messages list autoscrolls to the bottom when new messages arrive and the user has not scrolled up.
 1. When the user has scrolled up to see older messages, a "Back to newer" button is shown at the bottom of the chat window.
 1. Scrolling to the top of the current messages list will cause the client to fetch more messages from the server.
