@@ -62,7 +62,7 @@ export function MessageCard(props: MessageCardProps): JSX.Element {
 		paddingRight: '15px',
 		whiteSpace: 'normal',
 		wordWrap: 'break-word',
-		backgroundColor: '#decd9e',
+		backgroundColor: '#f0dda9',
 	} satisfies React.CSSProperties;
 
 	const messageTextStyle = {
