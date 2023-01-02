@@ -24,7 +24,7 @@ and open your default web browser to the URL that is being served by the local P
 1. Client-side username and password validation for the registration form.
 1. Input fields display invalid state using form feedback components.
 1. Notification of network or backend errors through browser alerts.
-1. Responsive and mobile screen versions of the auth page.
+1. Responsive layout for desktop, tablet and mobile screens.
 
 ### Chatroom
 
@@ -40,4 +40,4 @@ and open your default web browser to the URL that is being served by the local P
 1. Successive messages by the same user have the username and avatar icon hidden in order to compact the view.
 1. Hovering the mouse over a message will display a tooltip about the author and the timestamp of the message.
 1. Users are able to submit their messages using the Enter key on the keyboard.
-1. Responsive and mobile screen versions of the chatroom.
+1. Responsive layout for desktop, tablet and mobile screens.
