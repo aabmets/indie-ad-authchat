@@ -3,7 +3,7 @@
 ## Description
 
 This is a small project for my portfolio to showcase the implementation of an authenticated chatroom  
-using Vite + React with Bootstrap for the front-end and PocketBase PaaS for the back-end. Alltogether,  
+using Vite + React with Bootstrap for the front-end and PocketBase PaaS for the back-end. Altogether,  
 this project took about two workweeks to complete and contains about 1700 lines of code.
 
 Almost all of the code and logic was created by myself, with only a tiny fraction taken directly from  
