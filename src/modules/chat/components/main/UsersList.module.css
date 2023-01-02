@@ -1,11 +1,7 @@
 .usersList {
-	width: 30%;
 	height: 100%;
-	min-width: 170px;
-	max-width: 350px;
-	border-left: 1.5px solid #d0d0d0;
+	max-width: 300px;
 }
-
 .usersList__info {
 	height: 40px;
 	display: flex;
@@ -15,21 +11,18 @@
 	padding-bottom: 3px;
 	border-bottom: 1.5px solid #d0d0d0;
 }
-
 .usersList__infoText {
 	font-size: 0.8rem; 
 	font-weight: 800; 
 	font-family: Verdana;
 	color: #F44336;
 }
-
 .usersList__infoCount {
 	font-size: 0.8rem; 
 	font-weight: 800; 
 	font-family: Verdana;
 	color: #3D3D3D;
 }
-
 .usersList__content {
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -37,4 +30,30 @@
 	padding-left: 3%;
 	height: calc(100% - 40px);
 	border-bottom: 1.5px solid #d0d0d0;
+	border-left: 1.5px solid #d0d0d0;
+}
+
+/* RESPONSIVE SCREEN */
+@media (min-width: 500px) {
+	.usersList {
+		width: 30%;
+		min-width: 170px;
+	}
+	.usersList__info {
+		border-left: 1.5px solid #d0d0d0;
+	}
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 500px) {
+	.usersList {
+		width: 100%;
+		min-width: 220px;
+	}
+	.usersList__infoText {
+		font-size: 1rem;
+	}
+	.usersList__infoCount {
+		font-size: 1rem;
+	}
 }

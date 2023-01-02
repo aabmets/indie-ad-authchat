@@ -3,6 +3,7 @@
 const appConfig = {
 	style: {
 		mobileScreenMaxWidth: 500,
+		superNarrowMaxWidth: 300,
 	},
 	pocketBase: {
 		serverAddress: 'http://127.0.0.1:8090',

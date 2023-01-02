@@ -19,6 +19,7 @@
 		"paths": {
 			// common
 			"@context": ["src/common/context/_exports"],
+			"@hooks": ["src/common/hooks/_exports"],
 
 			// modules
 			"@auth": ["src/modules/auth/_exports"],

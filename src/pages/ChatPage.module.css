@@ -4,37 +4,11 @@
 	align-items: center;
 	
 }
-@media (max-width: 800px) {
-	.screenContainer {
-		height: 100vh;
-	}
-}
-@media (min-width: 800px) {
-	.screenContainer {
-		height: 90vh;
-	}
-}
-
 .chatWindow {
 	display: flex;
 	flex-direction: column;
 	background-color: #ffffff;
 }
-@media (max-width: 800px) {
-	.chatWindow {
-		width: 100vw;
-		height: 100vh;
-	}
-}
-@media (min-width: 800px) {
-	.chatWindow {
-		height: auto;
-		width: auto; 
-		border-radius: 10px; 
-		border: 4px double #d5d5d5; 
-	}
-}
-
 .chatContent {
 	display: flex;
 	flex-direction: row;
@@ -42,19 +16,38 @@
 	justify-self: stretch;
 	min-height: 250px;
 }
+.inputField {
+	padding: 5px 15px 5px 15px;
+}
+
+/* TABLET SCREEN */
 @media (max-width: 800px) {
+	.screenContainer {
+		height: 100vh;
+	}
+	.chatWindow {
+		width: 100vw;
+		height: 100vh;
+	}
 	.chatContent {
 		height: 100vh;
 		max-height: 900px;
 	}
 }
+
+/* RESPONSIVE SCREEN */
 @media (min-width: 800px) {
+	.screenContainer {
+		height: 90vh;
+	}
+	.chatWindow {
+		height: auto;
+		width: auto; 
+		border-radius: 10px; 
+		border: 4px double #d5d5d5; 
+	}
 	.chatContent {
 		height: 60vh;
 		max-height: 600px;
 	}
-}
-
-.inputField {
-	padding: 5px 15px 5px 15px;
 }

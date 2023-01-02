@@ -1,4 +1,5 @@
 import { Image } from 'react-bootstrap';
+import { useDeviceDetector } from '@hooks';
 import { getMessageCardTitle } from '@chat';
 import othersAvatar from '/others-avatar.png';
 import selfAvatar from '/self-avatar.png';
@@ -18,6 +19,7 @@ export function MessageCard(props: MessageCardProps): JSX.Element {
 	const pix = (isChained ? '5px' : '10px');
 
 	const cardHoverTitle = getMessageCardTitle(username, created);
+	const { isMobile } = useDeviceDetector();
 
 	const flexColumnStyle = {
 		display: 'flex', 
@@ -55,7 +57,7 @@ export function MessageCard(props: MessageCardProps): JSX.Element {
 	} satisfies React.CSSProperties;
 
 	const messageBoxStyle = {
-		maxWidth: '70%',
+		maxWidth: isMobile ? '100%' : '70%',
 		borderRadius: '10px',
 		paddingRight: '15px',
 		whiteSpace: 'normal',

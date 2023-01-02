@@ -1,14 +1,12 @@
 import { Image } from 'react-bootstrap';
+import { useDeviceDetector } from '@hooks';
 import { RegisterButton, LoginButton } from '@auth';
-import { useMediaQuery } from 'react-responsive';
 import logoResponsive from '/logo-responsive.png';
 import logoMobile from '/logo-mobile.png';
 import styles from './AuthPage.module.css';
-import appConfig from 'app.config';
 
 function AuthPage(): JSX.Element {
-	const size = appConfig.style.mobileScreenMaxWidth;
-	const isMobile = useMediaQuery({ query: `(max-width: ${size}px)` });
+	const { isMobile } = useDeviceDetector();
 	const logo = isMobile ? logoMobile : logoResponsive;
 
 	return (

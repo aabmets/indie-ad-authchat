@@ -3,22 +3,18 @@
 	transform: translateY(-55px);
 	width: 100%;
 }
-
 .centerAlign {
 	display: flex; 
 	justify-content: center;
 	width: 100%; 
 }
-
 .btnBody {
 	border-radius: 25px;
 }
-
 .btnText {
 	font-size: 0.7rem; 
 	font-weight: 500;
 }
-
 .downArrow {
 	animation: bounce 800ms infinite ease-in-out;
 	padding-top: 2px;
