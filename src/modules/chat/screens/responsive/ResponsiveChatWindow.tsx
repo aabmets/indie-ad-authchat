@@ -13,7 +13,9 @@ export function ResponsiveChatWindow(): JSX.Element {
 					<ChatBox />
 					<UsersList />
 				</div>
-				<MessageInput />
+				<div className={styles.inputField}>
+					<MessageInput />
+				</div>
 			</div>
 		</div>
 	);

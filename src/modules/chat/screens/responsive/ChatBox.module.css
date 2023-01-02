@@ -2,7 +2,16 @@
 	position: relative;
 	min-width: 350px;
 	max-width: 600px;
-	width: 50vw;
+}
+@media (max-width: 800px) {
+	.screenContainer {
+		width: 100vw;
+	}
+}
+@media (min-width: 800px) {
+	.screenContainer {
+		width: 50vw;
+	}
 }
 
 .chatBox {
