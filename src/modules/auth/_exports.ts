@@ -8,10 +8,8 @@ export type { FormFieldState };
 
 // components
 import { RegisterButton } from './register/RegisterButton';
-export { RegisterButton };
-
 import { LogoutButton } from './logout/LogoutButton';
-export { LogoutButton };
-
 import { LoginButton } from './login/LoginButton';
+export { RegisterButton };
+export { LogoutButton };
 export { LoginButton };

@@ -5,18 +5,17 @@ import othersAvatar from '/others-avatar.png';
 import selfAvatar from '/self-avatar.png';
 import styles from './UsersList.module.css';
 
-function UsersList(): JSX.Element {
+export function UsersList(): JSX.Element {
 	const pb = usePocketBaseContext();
 	const activeUsers = useActiveUsersList();
-
 	const selfUsername = (pb.authStore.model as FullUserRecord).username;
 
 	return (
-		<div className={styles.usersList__container}>
-			<div className={styles.usersList__header}>
+		<div className={styles.usersList}>
+			<div className={styles.usersList__info}>
 				<div>
-					<span className={styles.usersList__headerText}>ACTIVE USERS: </span>
-					<span className={styles.usersList__headerCount}>{activeUsers.length}</span>
+					<span className={styles.usersList__infoText}>ACTIVE USERS: </span>
+					<span className={styles.usersList__infoCount}>{activeUsers.length}</span>
 				</div>
 			</div>
 			<div className={styles.usersList__content}>
@@ -37,5 +36,3 @@ function UsersList(): JSX.Element {
 		</div>
 	);
 }
-
-export default UsersList;

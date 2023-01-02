@@ -5,7 +5,7 @@ import { FullUserRecord, ResetScrollButton } from '@chat';
 import { MessageCard, NotificationCard } from '@chat';
 import styles from './ChatBox.module.css';
 
-function ChatBox() {
+export function ChatBox() {
 	const { messagesList, fetchOlderMessages, isFetching } = useMessagesList();
 	const { scrollRef, showResetButton, noMoreMessages, resetScrollState} = useScrollBehavior(
 		{ messagesList, fetchOlderMessages, isFetching }
@@ -15,8 +15,8 @@ function ChatBox() {
 	let previousUsername = '';
 
 	return (
-		<div className={styles.chatBoxContainer}>
-			<div className={styles.chatBox} ref={scrollRef}>
+		<div className={styles.chatBox}>
+			<div className={styles.chatBox__messages} ref={scrollRef}>
 				{messagesList.length === 0 && !isFetching ?
 					<NotificationCard message={'No messages yet.'}/>
 				: null}
@@ -24,7 +24,7 @@ function ChatBox() {
 					<NotificationCard message={'No more messages.'}/>
 				: null}
 				{isFetching ?
-					<div className={styles.loaderWrapper}>
+					<div className={styles.chatBox__spinner}>
 						<Spinner 
 							animation='border' 
 							variant='primary' 
@@ -54,5 +54,3 @@ function ChatBox() {
 		</div>
 	);
 }
-
-export default ChatBox;

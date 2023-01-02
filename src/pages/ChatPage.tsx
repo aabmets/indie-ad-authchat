@@ -1,17 +1,21 @@
-import { Fragment } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import { ResponsiveChatWindow } from '@chat';
-import { MobileChatWindow } from '@chat';
-import appConfig from 'app.config';
+import { MessageInput, Header } from '@chat';
+import { ChatBox, UsersList } from '@chat';
+import styles from './ChatPage.module.css';
 
 function ChatPage(): JSX.Element {
-	const size = appConfig.style.mobileScreenMaxWidth;
-	const isMobile = useMediaQuery({ query: `(max-width: ${size}px)` });
-
 	return (
-		<Fragment>
-			{isMobile ? <MobileChatWindow/> : <ResponsiveChatWindow/>}
-		</Fragment>
+		<div className={styles.screenContainer}>
+			<div className={styles.chatWindow}>
+				<Header />
+				<div className={styles.chatContent}>
+					<ChatBox />
+					<UsersList />
+				</div>
+				<div className={styles.inputField}>
+					<MessageInput />
+				</div>
+			</div>
+		</div>
 	);
 }
 

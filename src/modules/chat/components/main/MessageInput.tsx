@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form, Button, InputGroup } from 'react-bootstrap';
 import { usePocketBaseContext } from '@context';
-import { FullUserRecord } from '../types';
+import { FullUserRecord } from '@chat';
 import submitBtn from '/submit.png';
 
 export function MessageInput() {

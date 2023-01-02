@@ -1,4 +1,4 @@
-.usersList__container {
+.usersList {
 	width: 30%;
 	height: 100%;
 	min-width: 170px;
@@ -6,16 +6,7 @@
 	border-left: 1.5px solid #d0d0d0;
 }
 
-.usersList__content {
-	overflow-y: scroll;
-	overflow-x: hidden;
-	padding-top: 8px;
-	padding-left: 3%;
-	height: calc(100% - 40px);
-	border-bottom: 1.5px solid #d0d0d0;
-}
-
-.usersList__header {
+.usersList__info {
 	height: 40px;
 	display: flex;
 	flex-direction: column;
@@ -25,16 +16,25 @@
 	border-bottom: 1.5px solid #d0d0d0;
 }
 
-.usersList__headerText {
+.usersList__infoText {
 	font-size: 0.8rem; 
 	font-weight: 800; 
 	font-family: Verdana;
 	color: #F44336;
 }
 
-.usersList__headerCount {
+.usersList__infoCount {
 	font-size: 0.8rem; 
 	font-weight: 800; 
 	font-family: Verdana;
 	color: #3D3D3D;
+}
+
+.usersList__content {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-top: 8px;
+	padding-left: 3%;
+	height: calc(100% - 40px);
+	border-bottom: 1.5px solid #d0d0d0;
 }

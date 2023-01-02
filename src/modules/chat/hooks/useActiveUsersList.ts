@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { RecordSubscription } from 'pocketbase';
 import { usePocketBaseContext } from '@context';
-import { FullUserRecord, LeanUserRecord } from '../types';
+import { FullUserRecord, LeanUserRecord } from '@chat';
 
 export function useActiveUsersList(): LeanUserRecord[] {
 	const [activeUsersList, setActiveUsersList] = useState<LeanUserRecord[]>([]);

@@ -1,8 +1,28 @@
-// screens
-import { ResponsiveChatWindow } from './screens/responsive/ResponsiveChatWindow';
-import { MobileChatWindow } from './screens/mobile/MobileChatWindow';
-export { ResponsiveChatWindow };
-export { MobileChatWindow };
+// main components
+import { ChatBox } from './components/main/ChatBox';
+import { Header } from './components/main/Header';
+import { MessageInput } from './components/main/MessageInput';
+import { UsersList } from './components/main/UsersList';
+export { ChatBox };
+export { Header };
+export { MessageInput };
+export { UsersList };
+
+// sub components
+import { MessageCard } from './components/sub/MessageCard';
+import { NotificationCard } from './components/sub/NotificationCard';
+import { ResetScrollButton } from './components/sub/ResetScrollButton';
+import { TypingIndicator } from './components/sub/TypingIndicator';
+import { UserCard } from './components/sub/UserCard';
+export { MessageCard };
+export { NotificationCard };
+export { ResetScrollButton };
+export { TypingIndicator };
+export { UserCard };
+
+// helpers
+import { getMessageCardTitle } from './helpers/utils';
+export { getMessageCardTitle };
 
 // hooks
 import { useActiveUsersList } from './hooks/useActiveUsersList';
@@ -11,22 +31,6 @@ import { useScrollBehavior } from './hooks/useScrollBehavior';
 export { useActiveUsersList };
 export { useMessagesList };
 export { useScrollBehavior };
-
-// helpers
-import { getMessageCardTitle } from './helpers/utils';
-export { getMessageCardTitle };
-
-// components
-import { MessageCard } from './components/MessageCard';
-import { MessageInput } from './components/MessageInput';
-import { NotificationCard } from './components/NotificationCard';
-import { ResetScrollButton } from './components/ResetScrollButton';
-import { UserCard } from './components/UserCard';
-export { MessageCard };
-export { MessageInput };
-export { NotificationCard };
-export { ResetScrollButton };
-export { UserCard };
 
 // types
 import type { FullUserRecord } from './types';
