@@ -45,6 +45,6 @@ and open your default web browser to the URL that is being served by the local P
 ## Limitations
 
 + Because this version of PocketBase that is used for this project does not support server-side functions,  
-it is not possible to log out a user from server side when the client becomes unresponsive.  
+it is not possible in a reasonable manner to log out a unresponsive client which has failed to log out itself.  
 It could be done unreasonably, whereby each client would have to track the heartbeat of every other  
-logged-in user, but this is not scalable for larger userbases.  
+logged-in client, but this is not scalable to larger userbases.  
