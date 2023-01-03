@@ -48,3 +48,5 @@ and open your default web browser to the URL that is being served by the local P
 it is not possible in a reasonable manner to log out an unresponsive client who has failed to log itself out.  
 It could be done unreasonably, whereby each client would have to track the heartbeat of every other  
 active client, but this is not a scalable approach for larger userbases.  
+
++ Does not support Landscape mode on mobile devices.
