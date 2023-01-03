@@ -12,8 +12,8 @@ the internet was only used for reading related documentation, troubleshooting bu
 
 ## How to use
 
-The project folder contains a simple batch script "run_server.bat", which will run the PocketBase server  
-and open your default web browser to the URL that is being served by the local PocketBase instance.  
+Download the whole project folder and run the included "run_server.bat" script, which starts the PocketBase  
+server and opens your default web browser to the URL that is being served by the local PocketBase instance.  
 Then you can just interact with the chatroom as with any other website. I would recommend you to open  
 a second incognito (anonymous) tab and login with another username to see how the views differ.
 
