@@ -2,11 +2,9 @@ import { Button, Image } from 'react-bootstrap';
 import styles from './ScrollResetButton.module.css';
 import downArrow from '/downward-arrow.png';
 
-interface Props {
-	callback: () => void;
-}
+type ScrollResetButtonProps = { callback: () => void };
 
-export function ScrollResetButton({ callback }: Props): JSX.Element {
+export function ScrollResetButton({ callback }: ScrollResetButtonProps): JSX.Element {
 	return (
 		<div className={styles.btnContainer}>
 			<div className={styles.centerAlign}>

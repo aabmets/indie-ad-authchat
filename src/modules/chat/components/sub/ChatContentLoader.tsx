@@ -1,9 +1,12 @@
 import { Fragment } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { ChatContentLoaderProps } from '@chat';
 import appConfig from 'app.config';
 
-type Wrapper = { children: JSX.Element | JSX.Element[] };
+interface ChatContentLoaderProps {
+	noMoreMessages?: boolean;
+	noMessagesYet?: boolean;
+	isFetching?: boolean;
+}
 
 export function ChatContentLoader(props: ChatContentLoaderProps): JSX.Element {
 	const { noMoreMessages, noMessagesYet, isFetching } = props;
@@ -24,26 +27,23 @@ export function ChatContentLoader(props: ChatContentLoaderProps): JSX.Element {
 		alignSelf: 'center',
 	} satisfies React.CSSProperties;
 
-	const Wrapper = ({ children }: Wrapper) =>
-		<div style={loaderStyle}>{children}</div>;
-
 	if (noMoreMessages) {
 		return (
-			<Wrapper>
+			<div style={loaderStyle}>
 				<span style={loaderTextStyle}>No more messages.</span>
-			</Wrapper>
+			</div>
 		);
 	} else if (noMessagesYet) {
 		return (
-			<Wrapper>
+			<div style={loaderStyle}>
 				<span style={loaderTextStyle}>No messages yet.</span>
-			</Wrapper>
+			</div>
 		)
 	} else if (isFetching) {
 		return (
-			<Wrapper>
+			<div style={loaderStyle}>
 				<Spinner animation='border' variant='primary' role='status'/>
-			</Wrapper>
+			</div>
 		);
 	} else {
 		return <Fragment />

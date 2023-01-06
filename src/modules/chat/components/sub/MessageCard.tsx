@@ -5,7 +5,7 @@ import othersAvatar from '/others-avatar.png';
 import selfAvatar from '/self-avatar.png';
 import blankAvatar from '/blank-avatar.png';
 
-export interface MessageCardProps {
+interface MessageCardProps {
 	username: string;
 	message: string;
 	created: string;
