@@ -1,13 +1,12 @@
-import { Spinner } from 'react-bootstrap';
 import { usePocketBaseContext } from '@context';
 import { useMessagesList, useScrollBehavior } from '@chat';
-import { FullUserRecord, ResetScrollButton } from '@chat';
-import { MessageCard, NotificationCard } from '@chat';
+import { FullUserRecord, ScrollResetButton } from '@chat';
+import { MessageCard, ChatContentLoader } from '@chat';
 import styles from './ChatBox.module.css';
 
 export function ChatBox() {
 	const { messagesList, fetchOlderMessages, isFetching } = useMessagesList();
-	const { scrollRef, showResetButton, noMoreMessages, resetScrollState} = useScrollBehavior(
+	const { scrollRef, showResetButton, noMoreMessages, resetScrollState } = useScrollBehavior(
 		{ messagesList, fetchOlderMessages, isFetching }
 	);
 	const pb = usePocketBaseContext();
@@ -16,22 +15,12 @@ export function ChatBox() {
 
 	return (
 		<div className={styles.chatBox}>
-			<div className={styles.chatBox__messages} ref={scrollRef}>
-				{messagesList.length === 0 && !isFetching ?
-					<NotificationCard message={'No messages yet.'}/>
-				: null}
-				{noMoreMessages ?
-					<NotificationCard message={'No more messages.'}/>
-				: null}
-				{isFetching ?
-					<div className={styles.chatBox__spinner}>
-						<Spinner 
-							animation='border' 
-							variant='primary' 
-							role='status' 
-						/>
-					</div>
-				: null}
+			<div className={styles.chatBoxMessages} ref={scrollRef}>
+				<ChatContentLoader 
+					noMessagesYet={messagesList.length === 0 && !isFetching}
+					noMoreMessages={noMoreMessages}
+					isFetching={isFetching}
+				/>
 				{messagesList.map((entry) => {
 					const isSelf = (entry.username === selfUsername);
 					const isChained = (entry.username === previousUsername);
@@ -49,7 +38,7 @@ export function ChatBox() {
 				})}
 			</div>
 			{showResetButton ?
-				<ResetScrollButton callback={resetScrollState}/>
+				<ScrollResetButton callback={resetScrollState}/>
 			: null}
 		</div>
 	);

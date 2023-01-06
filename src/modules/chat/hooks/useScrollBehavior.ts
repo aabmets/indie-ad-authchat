@@ -2,9 +2,11 @@ import { useRef, useState, useEffect } from 'react';
 import { useEventListener } from 'usehooks-ts';
 import { MessagesListState } from '@chat';
 import { ScrollBehaviorState } from '@chat';
+import appConfig from 'app.config';
 
 export function useScrollBehavior(messagesListState: MessagesListState): ScrollBehaviorState {
 	const { messagesList, fetchOlderMessages } = messagesListState;
+	const { chatContentLoaderHeight, chatScrolledUpOffset } = appConfig.style;
 	const [showResetButton, setResetButtonStatus] = useState<boolean>(false);
 	const [moreMessages, setMoreMessages] = useState<boolean>(true);
 	const [scrollOffset, setScrollOffset] = useState<number>(0);
@@ -27,7 +29,7 @@ export function useScrollBehavior(messagesListState: MessagesListState): ScrollB
 			setBusy(true);
 		} else {
 			const bottomPosition = el.scrollHeight - el.clientHeight;
-			const hasScrolledUp = el.scrollTop < (bottomPosition - 200);
+			const hasScrolledUp = el.scrollTop < (bottomPosition - chatScrolledUpOffset);
 			if (hasScrolledUp && !showResetButton) {
 				setResetButtonStatus(true);
 			} else if (showResetButton && !hasScrolledUp) {
@@ -42,7 +44,7 @@ export function useScrollBehavior(messagesListState: MessagesListState): ScrollB
 			el.scrollTop = el.scrollHeight - el.clientHeight;
 			setScrollOffset(el.scrollTop);
 		} else if (el && isBusy) {
-			el.scrollTop = el.scrollHeight - el.clientHeight - scrollOffset - 42;
+			el.scrollTop = el.scrollHeight - el.clientHeight - scrollOffset - chatContentLoaderHeight;
 			if (el.scrollTop === 0) {
 				setMoreMessages(false);
 			}
@@ -50,11 +52,10 @@ export function useScrollBehavior(messagesListState: MessagesListState): ScrollB
 		}
 	}, [messagesList]);
 
-	const noMoreMessages = !moreMessages;
 	return { 
 		scrollRef, 
 		showResetButton, 
-		noMoreMessages, 
+		noMoreMessages: !moreMessages, 
 		resetScrollState,
 	};
 }

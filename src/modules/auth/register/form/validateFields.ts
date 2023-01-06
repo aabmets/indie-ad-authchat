@@ -1,4 +1,4 @@
-import validator from 'password-validator';
+import validator from 'password-validator'; // also used as username validator
 import { FormFields } from '../types';
 import appConfig from 'app.config';
 

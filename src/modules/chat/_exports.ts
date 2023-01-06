@@ -9,15 +9,15 @@ export { MessageInput };
 export { UsersList };
 
 // sub components
-import { MessageCard } from './components/sub/MessageCard';
-import { NotificationCard } from './components/sub/NotificationCard';
-import { ResetScrollButton } from './components/sub/ResetScrollButton';
+import { ChatContentLoader } from './components/sub/ChatContentLoader';
+import { ScrollResetButton } from './components/sub/ScrollResetButton';
 import { TypingIndicator } from './components/sub/TypingIndicator';
+import { MessageCard } from './components/sub/MessageCard';
 import { UserCard } from './components/sub/UserCard';
-export { MessageCard };
-export { NotificationCard };
-export { ResetScrollButton };
+export { ChatContentLoader };
+export { ScrollResetButton };
 export { TypingIndicator };
+export { MessageCard };
 export { UserCard };
 
 // helpers
@@ -39,9 +39,11 @@ import type { FullMessageRecord } from './types';
 import type { LeanMessageRecord } from './types';
 import type { MessagesListState } from './types';
 import type { ScrollBehaviorState } from './types';
+import type { ChatContentLoaderProps } from './types';
 export type { FullUserRecord };
 export type { LeanUserRecord };
 export type { FullMessageRecord };
 export type { LeanMessageRecord };
 export type { MessagesListState };
 export type { ScrollBehaviorState };
+export type { ChatContentLoaderProps };

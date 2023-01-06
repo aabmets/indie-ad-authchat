@@ -42,3 +42,9 @@ export interface ScrollBehaviorState {
 	noMoreMessages: boolean;
 	resetScrollState: () => void;
 }
+
+export interface ChatContentLoaderProps {
+	noMoreMessages?: boolean;
+	noMessagesYet?: boolean;
+	isFetching?: boolean;
+}

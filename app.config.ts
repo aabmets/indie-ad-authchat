@@ -2,6 +2,8 @@
 
 const appConfig = {
 	style: {
+		chatScrolledUpOffset: 200,
+		chatContentLoaderHeight: 42,
 		mobileScreenMaxWidth: 500,
 		superNarrowMaxWidth: 300,
 	},
@@ -16,7 +18,7 @@ const appConfig = {
 		formSubmitDelay: 500,
 	},
 	chat: {
-		messageFetchDelay: 200,
+		networkRequestDelay: 200,
 	}
 }
 

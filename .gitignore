@@ -6,7 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-pocketbase/pb_data/logs.db
 
 node_modules
 dist
@@ -26,3 +25,8 @@ dist-ssr
 
 # Code Counter
 .VSCodeCounter/
+
+# PocketBase
+pocketbase/pb_data/data.db-shm
+pocketbase/pb_data/data.db-wal
+pocketbase/pb_data/logs.*

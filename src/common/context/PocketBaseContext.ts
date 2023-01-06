@@ -1,4 +1,4 @@
-import { createGenericContext } from 'src/common/context/_exports';
+import { createGenericContext } from './GenericContext';
 import PocketBase from 'pocketbase';
 import appConfig from 'app.config';
 

@@ -8,10 +8,10 @@
 	justify-content: center;
 	width: 100%; 
 }
-.btnBody {
+.buttonBody {
 	border-radius: 25px;
 }
-.btnText {
+.buttonText {
 	font-size: 0.7rem; 
 	font-weight: 500;
 }
@@ -29,4 +29,3 @@
 		transform: translateY(-5px);
 	}
 }
-

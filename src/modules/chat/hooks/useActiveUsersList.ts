@@ -76,11 +76,9 @@ export function useActiveUsersList(): LeanUserRecord[] {
 	useEffect(() => {
 		initActiveUsersList();
 		const users = pb.collection('users');
-		users.subscribe('*', updateUsersList)
-			.catch(() => null);
-		return () => {
-			users.unsubscribe()
-				.catch(() => null);
+		users.subscribe('*', updateUsersList).catch(() => null);
+		return () => { // cannot return a Promise
+			users.unsubscribe().catch(() => null);
 			return;
 		};
 	}, []);

@@ -1,4 +1,4 @@
-import { createGenericContext } from "src/common/context/_exports";
+import { createGenericContext } from "@context";
 import { FormState } from "./types";
 
 const product = createGenericContext<FormState>();

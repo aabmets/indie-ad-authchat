@@ -7,7 +7,7 @@ import { MessagesListState } from '@chat';
 import appConfig from 'app.config';
 
 export function useMessagesList(): MessagesListState {
-	const { messageFetchDelay } = appConfig.chat;
+	const { networkRequestDelay } = appConfig.chat;
 	const [messagesList, setMessagesList] = useState<LeanMessageRecord[]>([]);
 	const [isFetching, setFetching] = useState<boolean>(false);
 	const pb = usePocketBaseContext();
@@ -41,7 +41,7 @@ export function useMessagesList(): MessagesListState {
 				})
 				.catch(() => null)
 				.finally(() => setFetching(false));
-		}, messageFetchDelay);
+		}, networkRequestDelay);
 	}
 
 	function initMessagesList(): void {
@@ -62,7 +62,7 @@ export function useMessagesList(): MessagesListState {
 				})
 				.catch(() => null)
 				.finally(() => setFetching(false));
-		}, messageFetchDelay);
+		}, networkRequestDelay);
 	}
 
 	function updateMessagesList(event: RecordSubscription<FullMessageRecord>): void {
@@ -75,11 +75,9 @@ export function useMessagesList(): MessagesListState {
 	useEffect(() => {
 		initMessagesList();
 		const messages = pb.collection('messages');
-		messages.subscribe('*', updateMessagesList)
-			.catch(() => null);
-		return () => {
-			messages.unsubscribe()
-				.catch(() => null);
+		messages.subscribe('*', updateMessagesList).catch(() => null);
+		return () => { // cannot return a Promise
+			messages.unsubscribe().catch(() => null);
 			return;
 		};
 	}, []);

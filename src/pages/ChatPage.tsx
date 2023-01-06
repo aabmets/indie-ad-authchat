@@ -5,7 +5,6 @@ import styles from './ChatPage.module.css';
 
 function ChatPage(): JSX.Element {
 	const { isMobile } = useDeviceDetector();
-
 	return (
 		<div className={styles.screenContainer}>
 			<div className={styles.chatWindow}>
