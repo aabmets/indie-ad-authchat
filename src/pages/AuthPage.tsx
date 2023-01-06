@@ -8,7 +8,6 @@ import styles from './AuthPage.module.css';
 function AuthPage(): JSX.Element {
 	const { isMobile } = useDeviceDetector();
 	const logo = isMobile ? logoMobile : logoResponsive;
-
 	return (
 		<div className={styles.container}>
 			<div>

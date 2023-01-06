@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface Props<T> {
 	children: JSX.Element | JSX.Element[];
 	value?: T;
