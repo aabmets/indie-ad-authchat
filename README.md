@@ -6,10 +6,6 @@ This is a small project for my portfolio to showcase the implementation of an au
 using Vite + React with Bootstrap for the front-end and PocketBase PaaS for the back-end. Altogether,  
 this project took about two workweeks to complete and contains about 1700 lines of code.
 
-Almost all of the code and logic is original, with only a tiny fraction of it taken directly from the  
-Bootstrap documentation. No help was obtained from any tutorial videos, articles or third-parties and  
-the internet was only used for reading related documentation, troubleshooting bugs and some CSS rules.  
-
 ## How to use
 
 Download the whole project folder and run the included "run_server.bat" script, which starts the PocketBase  
